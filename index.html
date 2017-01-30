@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand home">Checkers</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right navoptions">
+                    <li class="mode active"><a id="standard">Standard</a></li>
+                    <!--<li class="mode"><a id="pawns">Pawns</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="board"></div>
+    <div class="info">
+        <div class="moves">
+            <div class="checkWarning"></div>
+            <b>NEXT MOVE: </b> <span class="nextTurn">White</span>
+            <h4>HISTORY</h4>
+            <div class="moves-list"></div>
+        </div>
+        <div class="captured">
+            <h4>CAPTURED</h4>
+            <div class="captured-list"></div>
+        </div>
+        <div class="winnerInfo hidden">
+            <h1>GAME OVER</h1>
+            <span class="winner"></span> wins
+        </div>
+    </div>
+</body>
+</html>

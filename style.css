@@ -1,0 +1,181 @@
+
+body{
+	background-color: black;
+    overflow:hidden;
+}
+
+.home, .nav li a{
+    cursor: pointer;
+}
+
+.board{
+    margin-top: 10px;
+    min-height: 72vh;
+	width: 72vh;
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+}
+
+.square {
+    opacity: 0.7;
+    min-height: 9vh;
+    width: 9vh;
+	text-align: center;
+	display: inline-block;
+	background-color: #f7f0cf;
+	border-radius: 7px;
+	border: 2px solid black;
+	margin: 0px;
+	
+	line-height: 9vh;
+	font-size: 7vh;
+}
+	.square:nth-child(-2n+8), 
+	.square:nth-child(8) ~ .square:nth-child(-2n+15), 
+	.square:nth-child(16) ~ .square:nth-child(-2n+24),
+	.square:nth-child(24) ~ .square:nth-child(-2n+31),
+	.square:nth-child(32) ~ .square:nth-child(-2n+40),
+	.square:nth-child(40) ~ .square:nth-child(-2n+47),
+	.square:nth-child(48) ~ .square:nth-child(-2n+56),
+	.square:nth-child(56) ~ .square:nth-child(-2n+63) {
+    background-color: #d1c698;
+}
+
+	.square:hover {
+		box-shadow: 0 0 10px #fff187;
+		border: 2px solid #fff187;
+	}
+	
+
+
+.selectable{
+    box-shadow: 0 0 2px #82b1ff;
+    border: 2px solid #82b1ff;
+}
+
+.selected {
+	box-shadow: 0 0 10px #fff187;
+	border: 2px solid #fff187;
+}
+
+.selectable, .killable, .highlighted {
+    opacity: 1;
+}
+
+.highlighted {
+	box-shadow: 0 0 10px #8effc5;
+	border: 2px solid #8effc5;
+}
+
+.killable {
+	box-shadow: 0 0 10px #c60d00;
+	border: 2px solid #c60d00;
+}
+
+.info{
+    color: white;
+}
+
+.moves {
+    margin-top: 60px;
+    margin-left: 10px;
+    display: block;
+    width: 20vw;
+    position: absolute;
+    top: 0;
+    right: -17px;
+    
+}
+.moves-list {
+    display: block;
+    height: 50vw;
+    width: 20vw;
+    position: absolute;
+    overflow-y: scroll;
+    font-size: 2vw;
+
+}
+.captured {
+    color: white;
+    margin-top: 60px;
+    margin-right: 10px;
+    display:  inline-block;
+    width: 20vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2vw;
+    word-wrap:break-word;
+    text-align:right;
+}
+.captured-list {
+    color: white;
+    margin-top: 10px;
+    margin-right: 10px;
+    display:  inline-block;
+    width: 20vw;
+    top: 0;
+    left: 0;
+    font-size: 3vw;
+    word-wrap:break-word;
+}
+
+.pawnPromotion {
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: black;
+    font-size: 12vw;
+   
+    background-color: white;
+    background-color: rgba(255,255,255,0.75);
+}
+.winnerInfo {
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: black;
+    font-size: 4em;
+   
+    background-color: white;
+    background-color: rgba(255,255,255,0.75);
+}
+
+.checkWarning {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+
+.hidden{
+    display: none;
+}
+
+.white-man:before {
+    content: "\26C0";
+}
+.white-king:before {
+    content: "\26C1";
+}
+.black-man:before {
+    content: "\26C2";
+}
+.black-king:before {
+    content: "\26C3";
+}
+
+.empty {
+	color: transparent !important;
+}
+.empty:before {
+	content: "\0000";
+}
